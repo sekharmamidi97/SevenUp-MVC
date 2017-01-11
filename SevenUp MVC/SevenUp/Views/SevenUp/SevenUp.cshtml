@@ -1,0 +1,45 @@
+﻿@model SevenUp.Model.SevenUpModel
+@{
+    ViewBag.Title = "SevenUp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:gold">Seven Up</h2>
+<p style="color:blue">Enter a number in each box below.</p>
+
+@using (Html.BeginForm("SevenUpResults", "SevenUp", FormMethod.Get))
+{
+    <div>
+        @Html.Label("box1", "Box 1: ")
+        @Html.TextBoxFor(b => b.Box1) <br />
+    </div>
+    <div>
+        @Html.Label("box2", "Box 2: ")
+        @Html.TextBoxFor(b => b.Box2) <br />
+    </div>
+    <div>
+        @Html.Label("box3", "Box 3: ")
+        @Html.TextBoxFor(b => b.Box3) <br />
+    </div>
+    <div>
+        @Html.Label("box4", "Box 4: ")
+        @Html.TextBoxFor(b => b.Box4) <br />
+    </div>
+    <div>
+        @Html.Label("box5", "Box 5: ")
+        @Html.TextBoxFor(b => b.Box5) <br />
+    </div>
+    <div>
+        @Html.Label("box6", "Box 6: ")
+        @Html.TextBoxFor(b => b.Box6) <br />
+    </div>
+    <div>
+        @Html.Label("box7", "Box 7: ")
+        @Html.TextBoxFor(b => b.Box7) <br />
+    </div>
+
+    <div>
+        <br />
+        <button>Submit</button>
+    </div>
+}
